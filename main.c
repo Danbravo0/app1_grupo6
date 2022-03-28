@@ -2,7 +2,7 @@
 #include <string.h>
 #include<stdbool.h>
 #include <stdio.h>
-#include "libros.h"
+#include <libros.h>
 
 int menu(); //Protipo menu
 // void guardado();//Prototipo del algoritmo usado para guardar los libros en arrays
@@ -14,10 +14,37 @@ int menu(); //Protipo menu
 
 // }
 
-int main(){
+void printValues(Libro libros[]){
+
+    // printf("hola si con quien ");
+    for (int i=0;i<15;i++){
+        // printf("hola si con quien ");
+        printf("titulo = %s, " ,libros[i].titulo );
+        printf("autor = %s, " ,libros[i].autor  );
+        printf("anio = %s, " ,libros[i].anio );
+        printf("estante_numero = %s, " ,libros[i].estante_numero );
+        printf("estante_seccion = %s, " ,libros[i].estante_seccion );
+        printf("piso = %s, " ,libros[i].piso );
+        printf("edificio = %s, " ,libros[i].edificio );
+        printf("sede = %s, " ,libros[i].sede );
+
+
+
+
+
+        printf("\n");
+        printf("\n");
+    }
+}
+
+int main(int argc, char *argv[]){
     // Inicializamos el puntero del archivo
 
-    FILE *fp = fopen("inventario.csv","r"); //abrir en write
+    char archivo[30];
+
+    strcpy(archivo,argv[1]);
+
+    FILE *fp = fopen(archivo,"r"); //abrir en write
     if (!fp){
         printf("FP NO EXISTE");
     }
@@ -41,32 +68,40 @@ int main(){
     // printf("wena");
         while (campo){
     // printf("wena\n");
-             if(contador_campo == 0){
+             switch(contador_campo){
+                 case 0:
                  strcpy(libros[i].titulo,campo);
+                 break;
                 //  printf("0 = %s \n",libros[i].titulo);
-             }
-             if(contador_campo == 1){
+
+                 case 1:
                  strcpy(libros[i].autor,campo);
-                //  printf("1 = %s \n",libros[i].autor);
-             }
-             if(contador_campo == 2){
+                 break;
+                 //  printf("1 = %s \n",libros[i].autor);
+
+                 case 2:
                  strcpy(libros[i].anio,campo);
+                 break;
                 //  printf("2 = %d \n",libros[i].anio);
-             }
-             if(contador_campo == 3){
+                case 3:
                  strcpy(libros[i].estante_numero,campo);
-             }
-             if(contador_campo == 4){
+                 break;
+
+                 case 4:
                  strcpy(libros[i].estante_seccion,campo);
-             }
-             if(contador_campo == 5){
+                 break;
+
+                 case 5:
                  strcpy(libros[i].piso,campo);
-             }
-             if(contador_campo == 6){
+                 break;
+
+                 case 6:
                  strcpy(libros[i].edificio,campo);
-             }
-             if(contador_campo == 7){
+                 break;
+
+                 case 7:
                  strcpy(libros[i].sede,campo);
+                 break;
              }
              campo = strtok(NULL,","); //actualizar valor del campo
              contador_campo ++;
@@ -75,24 +110,14 @@ int main(){
     // printf("wena");
     }
     fclose(fp);
-    printf("wenarda 1 \n");
+
     printValues(libros);
     printf("wenarda 2");
     return 0;
 }
 
 
-void printValues(Libro libros[]){
 
-        // printf("hola si con quien ");
-    for (int i=0;i<999;i++){
-        // printf("hola si con quien ");
-        printf("titulo = %s, autor = %s, anio = %s, estante numero = %s, estante seccion = %s, piso = %s, edificio = %, sede = %s",
-        libros[i].titulo,libros[i].autor,libros[i].anio,libros[i].estante_numero,libros[i].estante_seccion,libros[i].piso,libros[i].edificio,libros[i].sede);
-        printf("\n");
-        printf("\n");
-    }
-}
 
 
 int menu(){
