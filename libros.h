@@ -12,4 +12,8 @@ struct Libros {
 
 typedef struct Libros Libro;
 
-void infoLibro(Libro Libro);
+int buscar();
+
+void infoLibro(int index);
+
+void cambiar_sede(int index,char sede[90]);
