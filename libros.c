@@ -1,7 +1,7 @@
 #include "libros.h"
 #include <stdio.h>
 
-void infoLibro(Libro Libro ) {
+void infoLibro(Libro Libro) {
 
    printf( "Titulo del libro: %s\n", Libro.titulo);
    printf( "Autor del libro: %s\n", Libro.autor);

@@ -1,24 +1,46 @@
 #include <stdlib.h>
 #include <string.h>
-#include<stdbool.h>
+#include <stdbool.h>
 #include <stdio.h>
-#include <libros.h>
+#include "libros.h"
+
+
+Libro libros[999]; //HACEMOS LA ARRAY GLOBAL PARA PODER EDITARLA DENTRO DE TODAS LAS FUNCIONES
+
 
 int menu(); //Protipo menu
-// void guardado();//Prototipo del algoritmo usado para guardar los libros en arrays
+int leer(int argc, char *argv[]);
+void printValues();
+void cambiar_sede(int index,char sede[]);
+int buscar();
 
-// int main(){
+int main(int argc, char *argv[]){
+    
+    leer(argc,argv);
+    printValues();
+    printf("*************\n");
+    cambiar_sede(1,"hola si con quien");
+    printValues();
+    printf("*************\n");
+    getchar();
+    return 0;
+}
 
 
-//     printf("el digito es %d",menu());
 
-// }
 
-void printValues(Libro libros[]){
+void cambiar_sede(int index,char sede[90]){
 
-    // printf("hola si con quien ");
+    strcpy(libros[index].sede,sede);
+
+}
+
+
+
+void printValues(){
+
+
     for (int i=0;i<15;i++){
-        // printf("hola si con quien ");
         printf("titulo = %s, " ,libros[i].titulo );
         printf("autor = %s, " ,libros[i].autor  );
         printf("anio = %s, " ,libros[i].anio );
@@ -27,7 +49,7 @@ void printValues(Libro libros[]){
         printf("piso = %s, " ,libros[i].piso );
         printf("edificio = %s, " ,libros[i].edificio );
         printf("sede = %s, " ,libros[i].sede );
-
+        printf( "delete = %d ", libros[i].to_delete);
 
 
 
@@ -37,10 +59,20 @@ void printValues(Libro libros[]){
     }
 }
 
-int main(int argc, char *argv[]){
-    // Inicializamos el puntero del archivo
+int buscar() {
+    char nombre[50];
+    printf("Escriba el nombre del libro que desea\n");
+    scanf("%s", nombre);
 
-    char archivo[30];
+    for (int i = 0; i < 6; ++i) {
+        if (strcmp(libros[i].titulo, nombre) == 0) {
+            return i;
+        }
+    }
+}
+
+int leer(int argc, char *argv[]){
+        char archivo[30];
 
     strcpy(archivo,argv[1]);
 
@@ -53,8 +85,6 @@ int main(int argc, char *argv[]){
     int contador_fila = 0;
     int contador_campo = 0;
 
-    Libro libros[999]; //creamos una array para guardar los libros
-
     int i = 0;
 
     while(fgets(buff,2000,fp)){
@@ -64,60 +94,48 @@ int main(int argc, char *argv[]){
         if(contador_fila == 1){
             continue; //No nos importa la primer fila, ya que son los nombres de cada columna
         }
+
+
         char *campo = strtok(buff,","); //Separa una string en una serie de "tokens" usando el delimitador coma https://www.tutorialspoint.com/c_standard_library/c_function_strtok.htm
-    // printf("wena");
+
         while (campo){
-    // printf("wena\n");
+
              switch(contador_campo){
-                 case 0:
-                 strcpy(libros[i].titulo,campo);
-                 break;
-                //  printf("0 = %s \n",libros[i].titulo);
-
-                 case 1:
-                 strcpy(libros[i].autor,campo);
-                 break;
-                 //  printf("1 = %s \n",libros[i].autor);
-
-                 case 2:
-                 strcpy(libros[i].anio,campo);
-                 break;
-                //  printf("2 = %d \n",libros[i].anio);
-                case 3:
-                 strcpy(libros[i].estante_numero,campo);
+                 case 0: strcpy(libros[i].titulo,campo);
                  break;
 
-                 case 4:
-                 strcpy(libros[i].estante_seccion,campo);
+                 case 1: strcpy(libros[i].autor,campo);
                  break;
 
-                 case 5:
-                 strcpy(libros[i].piso,campo);
+                 case 2: strcpy(libros[i].anio,campo);
                  break;
 
-                 case 6:
-                 strcpy(libros[i].edificio,campo);
+                case 3: strcpy(libros[i].estante_numero,campo);
                  break;
 
-                 case 7:
-                 strcpy(libros[i].sede,campo);
+                 case 4: strcpy(libros[i].estante_seccion,campo);
                  break;
+
+                 case 5: strcpy(libros[i].piso,campo);
+                 break;
+
+                 case 6: strcpy(libros[i].edificio,campo);
+                 break;
+
+                 case 7: strcpy(libros[i].sede,campo);
+                 break;
+
+                 default:
+                     break;
              }
              campo = strtok(NULL,","); //actualizar valor del campo
              contador_campo ++;
         }
+        libros[i].to_delete=0;
         i++;
-    // printf("wena");
     }
     fclose(fp);
-
-    printValues(libros);
-    printf("wenarda 2");
-    return 0;
 }
-
-
-
 
 
 int menu(){
