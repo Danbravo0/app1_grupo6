@@ -14,6 +14,8 @@ typedef struct Libros Libro;
 
 int buscar();
 
+void borrar_libro();
+
 void infoLibro(int index);
 
 void cambiar_sede(int index,char sede[90]);

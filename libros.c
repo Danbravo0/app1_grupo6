@@ -15,6 +15,21 @@ int buscar() {
     }
 }
 
+void borrar_libro() {
+   //  char nombre[50];
+   //  printf("Escriba el nombre del libro a eliminar\n");
+   //  scanf("%s",nombre);
+
+   //  for (int i = 0; i < 6; ++i) {
+   //      if (strcmp(libros[i].titulo,nombre)==0){
+   //          libros[i].to_delete=1;
+   //      }
+   //  }
+   //  printf("Accion realizada\n");    
+}
+
+
+
 void infoLibro(int index) {
    printf( "Titulo del libro: %s\n", libros[index].titulo);
    printf( "Autor del libro: %s\n", libros[index].autor);

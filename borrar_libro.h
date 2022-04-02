@@ -1,3 +1,0 @@
-
-
-void borrar_libro();
