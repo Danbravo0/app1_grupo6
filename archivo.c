@@ -72,7 +72,10 @@ int leer(int argc, char *argv[]){
         i++;
     }
     fclose(fp);
+    return (contador_fila);
 }
+
+
 void guardar(int argc, char *argv[]){
     char archivo[30];
     strcpy(archivo,argv[1]);
