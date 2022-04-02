@@ -15,10 +15,10 @@ void cambiar_sede(int index,char sede[]);
 int main(int argc, char *argv[]){
     
     leer(argc,argv);
-    printValues(libros);
+    printValues();
     printf("*************\n");
     cambiar_sede(1,"hola si con quien");
-    printValues(libros);
+    printValues();
     printf("*************\n");
     getchar();
     return 0;
@@ -152,4 +152,11 @@ int menu(){
         scanf("%d", &x);
         return(x);
     // }while(true);
+}
+
+
+int buscar(char nombre[50]){ //Función que dado el nombre de un libro, encuentre un index en el array del structs
+
+    
+
 }
