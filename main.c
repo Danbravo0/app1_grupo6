@@ -12,6 +12,7 @@ int menu(); //Protipo menu
 int leer(int argc, char *argv[]);
 void printValues();
 void cambiar_sede(int index,char sede[]);
+int buscar();
 
 int main(int argc, char *argv[]){
     
@@ -58,6 +59,17 @@ void printValues(){
     }
 }
 
+int buscar() {
+    char nombre[50];
+    printf("Escriba el nombre del libro que desea\n");
+    scanf("%s", nombre);
+
+    for (int i = 0; i < 6; ++i) {
+        if (strcmp(libros[i].titulo, nombre) == 0) {
+            return i;
+        }
+    }
+}
 
 int leer(int argc, char *argv[]){
         char archivo[30];
