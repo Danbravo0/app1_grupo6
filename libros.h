@@ -7,6 +7,7 @@ struct Libros {
    char  piso[15];
    char  edificio[20];
    char  sede[50];
+   int to_delete;
 } ;
 
 typedef struct Libros Libro;
