@@ -3,10 +3,7 @@
 
 extern Libro libros[];
 
-int buscar() {
-    char nombre[50];
-    printf("Escriba el nombre del libro que desea\n");
-    scanf("%s", nombre);
+int buscar(char nombre) {
 
     for (int i = 0; i < 6; ++i) {
         if (strcmp(libros[i].titulo, nombre) == 0) {
@@ -15,17 +12,16 @@ int buscar() {
     }
 }
 
-void borrar_libro() {
-   //  char nombre[50];
-   //  printf("Escriba el nombre del libro a eliminar\n");
-   //  scanf("%s",nombre);
+void borrar_libro(char nombre) {
 
-   //  for (int i = 0; i < 6; ++i) {
-   //      if (strcmp(libros[i].titulo,nombre)==0){
-   //          libros[i].to_delete=1;
-   //      }
-   //  }
-   //  printf("Accion realizada\n");    
+     index=buscar(nombre);
+
+     for (int i = 0; i < 6; ++i) {
+         if (strcmp(libros[i].titulo,nombre)==0){
+             libros[i].to_delete=1;
+        }
+    }
+    printf("Accion realizada\n");
 }
 
 

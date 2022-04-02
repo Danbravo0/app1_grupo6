@@ -19,6 +19,8 @@ int main(int argc, char *argv[]){
     cambiar_sede(1,"hola si con quien");
     infoLibro(1);
     printf("*************\n");
+    //char nombre[50]= scanf()
+    //borrar_libro();
     getchar();
     return 0;
 }
