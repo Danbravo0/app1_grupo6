@@ -2,25 +2,44 @@
 #include <string.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include <libros.h>
+#include "libros.h"
+
+
+Libro libros[999]; //HACEMOS LA ARRAY GLOBAL PARA PODER EDITARLA DENTRO DE TODAS LAS FUNCIONES
 
 
 int menu(); //Protipo menu
-// void guardado();//Prototipo del algoritmo usado para guardar los libros en arrays
+int leer(int argc, char *argv[]);
+void printValues();
+void cambiar_sede(int index,char sede[]);
 
-// int main(){
+int main(int argc, char *argv[]){
+    
+    leer(argc,argv);
+    printValues();
+    printf("*************\n");
+    cambiar_sede(1,"hola si con quien");
+    printValues();
+    printf("*************\n");
+    getchar();
+    return 0;
+}
 
 
-//     printf("el digito es %d",menu());
 
-// }
 
-void printValues(Libro libros[]){
+void cambiar_sede(int index,char sede[90]){
 
-    // printf("hola si con quien ");
+    strcpy(libros[index].sede,sede);
 
-    for (int i=0;i<10;i++){
-        // printf("hola si con quien ");
+}
+
+
+
+void printValues(){
+
+
+    for (int i=0;i<15;i++){
         printf("titulo = %s, " ,libros[i].titulo );
         printf("autor = %s, " ,libros[i].autor  );
         printf("anio = %s, " ,libros[i].anio );
@@ -39,10 +58,9 @@ void printValues(Libro libros[]){
     }
 }
 
-int main(int argc, char *argv[]){
-    // Inicializamos el puntero del archivo
 
-    char archivo[30];
+int leer(int argc, char *argv[]){
+        char archivo[30];
 
     strcpy(archivo,argv[1]);
 
@@ -54,8 +72,6 @@ int main(int argc, char *argv[]){
     char buff[2000];
     int contador_fila = 0;
     int contador_campo = 0;
-
-    Libro libros[999]; //creamos una array para guardar los libros
 
     int i = 0;
 
@@ -107,15 +123,8 @@ int main(int argc, char *argv[]){
         i++;
     }
     fclose(fp);
-
-
-    //borrar_libro(libros);
-
-    printValues(libros);
-    printf("wenarda 2");
-    //infoLibro(libros[]);
-    return 0;
 }
+
 
 int menu(){
 
