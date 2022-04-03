@@ -4,11 +4,16 @@
 #include <stdio.h>
 #include "libros.h" 
 #include "archivo.h" //leer y escribir
+#include "admin.h"
 
 
 
 Libro libros[1500]; //HACEMOS LA ARRAY GLOBAL PARA PODER EDITARLA DENTRO DE TODAS LAS FUNCIONES
 int contador_libro; //Cantidad de libros
+char sedes[1500][100];
+char pisos[1500][30];
+char estantes_secciones[1500][100];
+
 enum OPTIONS {BUSCAR = 1, NUEVO = 2, QUITAR = 3, ADD_SEDE, QUITAR_SEDE, EDIT_LIBRO, CAMBIAR_SEDE, CAMBIAR_SECCION, CAMBIAR_PISO, AGREGAR_SECCIONES, 
               ELIMINAR_SECCIONES, AGREGAR_PISOS, QUITAR_PISOS,  SALIR = 14};
 
@@ -55,7 +60,7 @@ int main(int argc, char *argv[]){
       break;
 
     case ADD_SEDE:
-
+        sede_add();
       break;
 
     case QUITAR_SEDE:
@@ -79,7 +84,7 @@ int main(int argc, char *argv[]){
       break;
 
     case AGREGAR_SECCIONES:
-
+        seccion_add();
       break;
 
     case ELIMINAR_SECCIONES:
@@ -87,7 +92,7 @@ int main(int argc, char *argv[]){
       break;
 
     case AGREGAR_PISOS:
-
+        piso_add();
       break;
 
     case QUITAR_PISOS:
