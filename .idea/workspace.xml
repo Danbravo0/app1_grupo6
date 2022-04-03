@@ -66,7 +66,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../New folder (9)/app1_grupo6" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -78,7 +78,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app1_grupo6" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../inventario.csv" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="app1_grupo6" TARGET_NAME="app1_grupo6" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="app1_grupo6" RUN_TARGET_NAME="app1_grupo6">
+    <configuration name="app1_grupo6" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="../inventario(3).csv" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="app1_grupo6" TARGET_NAME="app1_grupo6" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="app1_grupo6" RUN_TARGET_NAME="app1_grupo6">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -93,7 +93,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648913848039</updated>
       <workItem from="1648913857755" duration="14271000" />
-      <workItem from="1648935113300" duration="2447000" />
+      <workItem from="1648935113300" duration="11478000" />
     </task>
     <task id="LOCAL-00001" summary="borrar+guardar">
       <created>1648917740253</created>
@@ -130,5 +130,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="borrar+guardar" />
     <option name="LAST_COMMIT_MESSAGE" value="borrar+guardar" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="libros[i]" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

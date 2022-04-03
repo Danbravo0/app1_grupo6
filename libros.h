@@ -12,9 +12,11 @@ struct Libros {
 
 typedef struct Libros Libro;
 
-int buscar(char nombre);
 
-void borrar_libro(char nombre);
+int buscar(char *nombre);
+
+void borrar_libro(char *nombre);
+
 
 void infoLibro(int index);
 

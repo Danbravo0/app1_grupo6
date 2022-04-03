@@ -5,20 +5,23 @@
 extern Libro libros[];
 
 
-int buscar(char nombre) {
+extern int contador_libro;
 
-    for (int i = 0; i < 6; ++i) {
+
+int buscar(char *nombre) {
+
+    for (int i = 0; i < contador_libro; ++i) {
         if (strcmp(libros[i].titulo, nombre) == 0) {
             return i;
         }
     }
 }
 
-void borrar_libro(char nombre) {
+void borrar_libro(char *nombre) {
 
      int index=buscar(nombre);
 
-     for (int i = 0; i < 6; ++i) {
+     for (int i = 0; i < contador_libro; ++i) {
          if (strcmp(libros[i].titulo,nombre)==0){
              libros[i].to_delete=1;
         }

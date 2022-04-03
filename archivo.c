@@ -6,7 +6,7 @@
 #include "archivo.h"
 
 extern Libro libros[];
-
+extern int contador_libro;
 
 int leer(int argc, char *argv[]){
         char archivo[30];
@@ -70,9 +70,14 @@ int leer(int argc, char *argv[]){
         }
         libros[i].to_delete=0;
         i++;
+
     }
+
     fclose(fp);
-    return (contador_fila);
+
+    contador_libro=contador_fila-1;
+
+
 }
 
 
@@ -84,9 +89,9 @@ void guardar(int argc, char *argv[]){
     fput= fopen(archivo,"w"); //abrir en write
 
     fprintf(fput,"titulo,autor,anio,estante_numero,estante_seccion,piso,edificio,sede\n");
-    for (int i=0; i<10;++i){
+    for (int i=0; i<contador_libro;++i){
         if (libros[i].to_delete !=1){
-            fprintf(fput,"%s, %s, %s, %s, %s, %s, %s\n",libros[i].titulo,libros[i].autor,libros[i].anio,libros[i].estante_numero,libros[i].estante_seccion,libros[i].piso,libros[i].edificio,libros[i].sede);
+            fprintf(fput,"%s,%s,%s,%s,%s,%s,%s,%s",libros[i].titulo,libros[i].autor,libros[i].anio,libros[i].estante_numero,libros[i].estante_seccion,libros[i].piso,libros[i].edificio,libros[i].sede);
         }
     }
 
