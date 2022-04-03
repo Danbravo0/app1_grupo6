@@ -15,6 +15,7 @@ int menu(); //Protipo menu
 
 int main(int argc, char *argv[]){
 
+/*
     char nombre[50];
     leer(argc,argv); //en archivo.c
     printf("1.-%d\n",contador_libro);
@@ -25,21 +26,23 @@ int main(int argc, char *argv[]){
     borrar_libro(nombre);
     guardar(argc,argv);
 
+
+  */
+    leer(argc,argv); //en archivo.c
+
+    printf("c_libros = %d",contador_libro);
+
+    nuevo(contador_libro);
+
     
-    //int c_libros = leer(argc,argv); //en archivo.c
+    printf("*************\n");
+    printf("*************\n");
 
-    // printf("c_libros = %d",c_libros);
+    infoLibro(contador_libro); //en libro.c
+    printf("%d\n",contador_libro);
+    guardar(argc,argv);
+    printf("******WENA*******\n");
 
-    //nuevo(contador_libro);
-
-    
-    //printf("*************\n");
-    //printf("*************\n");
-
-    //infoLibro(c_libros+1); //en libro.c
-
-   // guardar(argc,argv);
-    //printf("******WENA*******\n");
     // printf("*************\n");
     // cambiar_sede(1,"hola si con quien");
     // infoLibro(1);

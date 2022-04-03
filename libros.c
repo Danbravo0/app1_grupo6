@@ -53,51 +53,68 @@ void nuevo(int c_libros){
 
    printf("Nombre del libro a ingresar:");
    char nombre[300];
-   scanf("%s",nombre);
+
+   //scanf("%s",nombre);
+   strcpy(nombre,"nombre");
 
    printf("Autor de libro a ingresar:");
    char autor[300];
-   scanf("%s",autor);
+   //scanf("%s",autor);
+    strcpy(autor,"asd");
 
    printf("Anio del libro a ingresar:");
    char anio[300];
-   scanf("%s",anio);
+  // scanf("%s",anio);
+    strcpy(anio,"nomb");
 
    printf("Numero del estante de libro a ingresar:");
    char nest[300];
-   scanf("%s",nest);
+   //scanf("%s",nest);
+    strcpy(nest,"nombrasde");
 
    printf("Seccion del libro a ingresar:");
    char seccion[300];
-   scanf("%s",seccion);
+  // scanf("%s",seccion);
+    strcpy(seccion,"nombr");
 
    printf("Piso del libro a ingresar:");
    char piso[300];
-   scanf("%s",piso);
+  // scanf("%s",piso);
+    strcpy(piso,"nomasdb");
 
    printf("Edificio del libro a ingresar:");
    char edificio[300];
-   scanf("%s",edificio);
+  // scanf("%s",edificio);
+    strcpy(edificio,"nombreee");
 
    printf("Sede del libro a ingresar:");
    char sede[300];
-   scanf("%s",sede);
 
-   strcpy(libros[c_libros+1].titulo,nombre);
+   //scanf("%s",sede);
+    strcpy(sede,"no\n");
 
-   strcpy(libros[c_libros+1].autor,autor);
+   Libro libro;
 
-   strcpy(libros[c_libros+1].anio,anio);
+   strcpy(libro.titulo,nombre);
 
-   strcpy(libros[c_libros+1].estante_numero,nest);
+   strcpy(libro.autor,autor);
 
-   strcpy(libros[c_libros+1].estante_seccion,seccion);
+   strcpy(libro.anio,anio);
 
-   strcpy(libros[c_libros+1].piso,piso);
+   strcpy(libro.estante_numero,nest);
 
-   strcpy(libros[c_libros+1].edificio,edificio);
+   strcpy(libro.estante_seccion,seccion);
 
-   strcpy(libros[c_libros+1].sede,sede);
+   strcpy(libro.piso,piso);
+
+   strcpy(libro.edificio,edificio);
+
+   strcpy(libro.sede,sede);
+
+   libro.to_delete=0;
+
+   libros[c_libros]=libro;
+   contador_libro++;
 
 
 }
