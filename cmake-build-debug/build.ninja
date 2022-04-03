@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositorio/app1_grupo6/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositoriofinal/app1_grupo6/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target app1_grupo6
 
@@ -49,20 +49,26 @@ cmake_ninja_workdir = C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositor
 
 build cmake_object_order_depends_target_app1_grupo6: phony || CMakeFiles/app1_grupo6.dir
 
-build CMakeFiles/app1_grupo6.dir/archivo.c.obj: C_COMPILER__app1_grupo6_Debug C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositorio/app1_grupo6/archivo.c || cmake_object_order_depends_target_app1_grupo6
+build CMakeFiles/app1_grupo6.dir/archivo.c.obj: C_COMPILER__app1_grupo6_Debug C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositoriofinal/app1_grupo6/archivo.c || cmake_object_order_depends_target_app1_grupo6
   DEP_FILE = CMakeFiles\app1_grupo6.dir\archivo.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\app1_grupo6.dir
   OBJECT_FILE_DIR = CMakeFiles\app1_grupo6.dir
 
-build CMakeFiles/app1_grupo6.dir/libros.c.obj: C_COMPILER__app1_grupo6_Debug C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositorio/app1_grupo6/libros.c || cmake_object_order_depends_target_app1_grupo6
+build CMakeFiles/app1_grupo6.dir/libros.c.obj: C_COMPILER__app1_grupo6_Debug C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositoriofinal/app1_grupo6/libros.c || cmake_object_order_depends_target_app1_grupo6
   DEP_FILE = CMakeFiles\app1_grupo6.dir\libros.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\app1_grupo6.dir
   OBJECT_FILE_DIR = CMakeFiles\app1_grupo6.dir
 
-build CMakeFiles/app1_grupo6.dir/main.c.obj: C_COMPILER__app1_grupo6_Debug C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositorio/app1_grupo6/main.c || cmake_object_order_depends_target_app1_grupo6
+build CMakeFiles/app1_grupo6.dir/main.c.obj: C_COMPILER__app1_grupo6_Debug C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositoriofinal/app1_grupo6/main.c || cmake_object_order_depends_target_app1_grupo6
   DEP_FILE = CMakeFiles\app1_grupo6.dir\main.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\app1_grupo6.dir
+  OBJECT_FILE_DIR = CMakeFiles\app1_grupo6.dir
+
+build CMakeFiles/app1_grupo6.dir/admin.c.obj: C_COMPILER__app1_grupo6_Debug C$:/Users/Daniel$ Bravo/Desktop/New$ folder$ (4)/repositoriofinal/app1_grupo6/admin.c || cmake_object_order_depends_target_app1_grupo6
+  DEP_FILE = CMakeFiles\app1_grupo6.dir\admin.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\app1_grupo6.dir
   OBJECT_FILE_DIR = CMakeFiles\app1_grupo6.dir
@@ -75,7 +81,7 @@ build CMakeFiles/app1_grupo6.dir/main.c.obj: C_COMPILER__app1_grupo6_Debug C$:/U
 #############################################
 # Link the executable app1_grupo6.exe
 
-build app1_grupo6.exe: C_EXECUTABLE_LINKER__app1_grupo6_Debug CMakeFiles/app1_grupo6.dir/archivo.c.obj CMakeFiles/app1_grupo6.dir/libros.c.obj CMakeFiles/app1_grupo6.dir/main.c.obj
+build app1_grupo6.exe: C_EXECUTABLE_LINKER__app1_grupo6_Debug CMakeFiles/app1_grupo6.dir/archivo.c.obj CMakeFiles/app1_grupo6.dir/libros.c.obj CMakeFiles/app1_grupo6.dir/main.c.obj CMakeFiles/app1_grupo6.dir/admin.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\app1_grupo6.dir
@@ -90,7 +96,7 @@ build app1_grupo6.exe: C_EXECUTABLE_LINKER__app1_grupo6_Debug CMakeFiles/app1_gr
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Daniel Bravo\Desktop\New folder (4)\repositorio\app1_grupo6\cmake-build-debug" && "D:\Program Files\Jet Brains\CLion\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Daniel Bravo\Desktop\New folder (4)\repositoriofinal\app1_grupo6\cmake-build-debug" && "D:\Program Files\Jet Brains\CLion\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -101,7 +107,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "C:\Users\Daniel Bravo\Desktop\New folder (4)\repositorio\app1_grupo6\cmake-build-debug" && "D:\Program Files\Jet Brains\CLion\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\Daniel Bravo\Desktop\New folder (4)\repositorio\app1_grupo6" -B"C:\Users\Daniel Bravo\Desktop\New folder (4)\repositorio\app1_grupo6\cmake-build-debug""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\Daniel Bravo\Desktop\New folder (4)\repositoriofinal\app1_grupo6\cmake-build-debug" && "D:\Program Files\Jet Brains\CLion\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S"C:\Users\Daniel Bravo\Desktop\New folder (4)\repositoriofinal\app1_grupo6" -B"C:\Users\Daniel Bravo\Desktop\New folder (4)\repositoriofinal\app1_grupo6\cmake-build-debug""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -119,7 +125,7 @@ build app1_grupo6: phony app1_grupo6.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/Daniel Bravo/Desktop/New folder (4)/repositorio/app1_grupo6/cmake-build-debug
+# Folder: C:/Users/Daniel Bravo/Desktop/New folder (4)/repositoriofinal/app1_grupo6/cmake-build-debug
 
 build all: phony app1_grupo6.exe
 
