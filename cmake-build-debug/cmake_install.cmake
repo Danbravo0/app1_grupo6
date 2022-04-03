@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Daniel Bravo/Desktop/New folder (4)/repositorio/app1_grupo6
+# Install script for directory: C:/Users/Daniel Bravo/Desktop/New folder (4)/repositoriofinal/app1_grupo6
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/app1_grupo6")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/New_folder__9_")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Daniel Bravo/Desktop/New folder (4)/repositorio/app1_grupo6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/Daniel Bravo/Desktop/New folder (4)/repositoriofinal/app1_grupo6/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
