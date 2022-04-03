@@ -74,9 +74,13 @@ int leer(int argc, char *argv[]){
     }
 
     fclose(fp);
+
     contador_libro=contador_fila-1;
 
+
 }
+
+
 void guardar(int argc, char *argv[]){
     char archivo[30];
     strcpy(archivo,argv[1]);
