@@ -1,31 +1,32 @@
 #include "libros.h"
 #include <stdio.h>
+#include <string.h>
 
 extern Libro libros[];
 
-int buscar() {
-    char nombre[50];
-    printf("Escriba el nombre del libro que desea\n");
-    scanf("%s", nombre);
 
-    for (int i = 0; i < 6; ++i) {
+extern int contador_libro;
+
+
+int buscar(char *nombre) {
+
+    for (int i = 0; i < contador_libro; ++i) {
         if (strcmp(libros[i].titulo, nombre) == 0) {
             return i;
         }
     }
 }
 
-void borrar_libro() {
-   //  char nombre[50];
-   //  printf("Escriba el nombre del libro a eliminar\n");
-   //  scanf("%s",nombre);
+void borrar_libro(char *nombre) {
 
-   //  for (int i = 0; i < 6; ++i) {
-   //      if (strcmp(libros[i].titulo,nombre)==0){
-   //          libros[i].to_delete=1;
-   //      }
-   //  }
-   //  printf("Accion realizada\n");    
+     int index=buscar(nombre);
+
+     for (int i = 0; i < contador_libro; ++i) {
+         if (strcmp(libros[i].titulo,nombre)==0){
+             libros[i].to_delete=1;
+        }
+    }
+    printf("Accion realizada\n");
 }
 
 
@@ -44,5 +45,76 @@ void infoLibro(int index) {
 void cambiar_sede(int index,char sede[90]){
 
     strcpy(libros[index].sede,sede);
+
+}
+
+
+void nuevo(int c_libros){
+
+
+    if (strstr(libros[c_libros-1].sede,"\n")){
+        
+    }
+    else{
+        strcat(libros[c_libros-1].sede,"\n");
+    }
+
+    printf("Nombre del libro a ingresar:");
+    char nombre[300];
+    scanf("%s",nombre);
+  
+
+    printf("Autor de libro a ingresar:");
+    char autor[300];
+    scanf("%s",autor);
+
+
+    printf("Anio del libro a ingresar:");
+    char anio[300];
+    scanf("%s",anio);
+
+    printf("Numero del estante de libro a ingresar:");
+    char nest[300];
+    scanf("%s",nest);
+
+    printf("Seccion del libro a ingresar:");
+    char seccion[300];
+    scanf("%s",seccion);
+
+    printf("Piso del libro a ingresar:");
+    char piso[300];
+    scanf("%s",piso);
+
+    printf("Edificio del libro a ingresar:");
+    char edificio[300];
+    scanf("%s",edificio);
+
+    printf("Sede del libro a ingresar:");
+    char sede[300];
+    scanf("%s",sede);
+
+    Libro libro;
+
+    strcpy(libro.titulo,nombre);
+
+    strcpy(libro.autor,autor);
+
+    strcpy(libro.anio,anio);
+
+    strcpy(libro.estante_numero,nest);
+
+    strcpy(libro.estante_seccion,seccion);
+
+    strcpy(libro.piso,piso);
+
+    strcpy(libro.edificio,edificio);
+
+    strcpy(libro.sede,sede);
+
+    libro.to_delete=0;
+
+    libros[c_libros]=libro;
+    contador_libro++;
+
 
 }
