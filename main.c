@@ -25,8 +25,10 @@ int main(int argc, char *argv[]){
 
   int option = 0;
   leer(argc,argv); //en archivo.c
+  void llenar();
   int salir = 0;
   while (salir == 0){
+  
     menu();
     scanf("%d", &option);
     switch (option)
