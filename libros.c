@@ -53,6 +53,7 @@ void nuevo(int c_libros){
 
    printf("Nombre del libro a ingresar:");
    char nombre[300];
+
    //scanf("%s",nombre);
    strcpy(nombre,"nombre");
 
@@ -113,4 +114,5 @@ void nuevo(int c_libros){
 
    libros[c_libros]=libro;
    contador_libro++;
+
 }

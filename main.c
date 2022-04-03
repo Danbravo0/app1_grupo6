@@ -14,6 +14,7 @@ int contador_libro; //Cantidad de libros
 int menu(); //Protipo menu
 
 int main(int argc, char *argv[]){
+
 /*
     char nombre[50];
     leer(argc,argv); //en archivo.c
@@ -24,6 +25,7 @@ int main(int argc, char *argv[]){
     scanf("%[^\n]", nombre);
     borrar_libro(nombre);
     guardar(argc,argv);
+
 
   */
     leer(argc,argv); //en archivo.c
@@ -40,6 +42,7 @@ int main(int argc, char *argv[]){
     printf("%d\n",contador_libro);
     guardar(argc,argv);
     printf("******WENA*******\n");
+
     // printf("*************\n");
     // cambiar_sede(1,"hola si con quien");
     // infoLibro(1);
