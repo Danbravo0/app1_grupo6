@@ -8,7 +8,7 @@
 
 
 Libro libros[1500]; //HACEMOS LA ARRAY GLOBAL PARA PODER EDITARLA DENTRO DE TODAS LAS FUNCIONES
-int contador_libro;
+int contador_libro; //Cantidad de libros
 
 
 int menu(); //Protipo menu
@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
 
     // printf("c_libros = %d",c_libros);
 
-    //nuevo(c_libros);
+    //nuevo(contador_libro);
 
     
     //printf("*************\n");
