@@ -7,21 +7,20 @@
 
 
 Libro libros[999]; //HACEMOS LA ARRAY GLOBAL PARA PODER EDITARLA DENTRO DE TODAS LAS FUNCIONES
-
+int contador_libro;
 
 int menu(); //Protipo menu
 
 int main(int argc, char *argv[]){
-    
+    char nombre[50];
     leer(argc,argv); //en archivo.c
+    printf("1.-%d\n",contador_libro);
     infoLibro(1); //en libro.c
     printf("*************\n");
-    cambiar_sede(1,"hola si con quien");
-    infoLibro(1);
-    printf("*************\n");
-    //char nombre[50]= scanf()
-    //borrar_libro();
-    getchar();
+    printf("escriba nombre\n");
+    scanf("%[^\n]", nombre);
+    borrar_libro(nombre);
+    guardar(argc,argv);
     return 0;
 }
 
