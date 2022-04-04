@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <stdio.h>
-
+#include "quitar.h"
 #include "libros.h" 
 #include "archivo.h" //leer y escribir
 #include "admin.h"
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]){
     case BUSCAR: //Buscar libro
       printf("Ingrese el nombre del libro a buscar\n");
       char nombre[50];
-      scanf(" %[^\n]",nombre);
+      scanf("%[^\n]",nombre);
       infoLibro(buscar(nombre));
       printf("Presione enter para volver al menu");
       getchar();
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
       char nombre_q[50];
       scanf(" %[^\n]",nombre_q);
       borrar_libro(nombre_q);
-      printf("Libro quitado, presione enter para vovler al menu");
+      printf("Libro quitado, presione enter para volver al menu");
       getchar();
       getchar(); //Dos veces porque el switch hace que el primer getchar se "ignora"
       break;
@@ -78,8 +78,26 @@ int main(int argc, char *argv[]){
       break;
 
     case QUITAR_SEDE:
-
-      break;
+        printf("Introduzca el nombre de la sede que desea quitar:\n ");
+            char sede[50];
+            scanf(" %[^\n]",sede);
+            if (buscar_sede(sede)== -1) {
+                borrar_sedelista(sede);
+                printf("Se ha borrado la sede exitosamente");
+            }
+            else {
+                printf("Introduzca SI si desea elimar todos los libros asociados a la sede: \n  ");
+                char ans[10];
+                scanf("%s", ans);
+                if (strcmp(ans, "SI")==0){
+                    borrar_sede(sede);
+                    printf("Gracias");}
+                else {
+                printf("Haz decidido no quitar la sede"); }
+                }
+            getchar();
+            getchar();
+            break;
 
     case EDIT_LIBRO:
       printf("Ingresa el nombre del libro a editar\n");
@@ -113,6 +131,26 @@ int main(int argc, char *argv[]){
       break;
 
     case ELIMINAR_SECCIONES:
+        printf("Introduzca la seccion que desea quitar:\n ");
+            char seccion_borrar[50];
+            scanf(" %[^\n]",seccion_borrar);
+            if (buscar_seccion(seccion_borrar)== -1) {
+                borrar_seccionlista(seccion_borrar);
+                printf("Se ha borrado la seccion exitosamente");
+            }
+            else {
+                printf("Introduzca SI si desea elimar todos los libros asociados a la seccion: \n  ");
+                char ans[10];
+                scanf("%s", ans);
+                if (strcmp(ans, "SI")==0){
+                    borrar_seccion(seccion_borrar);
+                    printf("Gracias");}
+                else {
+                    printf("Haz decidido no quitar la seccion"); }
+            }
+            getchar();
+            getchar();
+
 
       break;
 
@@ -128,6 +166,25 @@ int main(int argc, char *argv[]){
       break;
 
     case QUITAR_PISOS:
+        printf("Introduzca el piso que desea quitar:\n ");
+            char piso_borrar[50];
+            scanf(" %[^\n]",piso_borrar);
+            if (buscar_piso(piso_borrar)== -1) {
+                borrar_pisolista(piso_borrar);
+                printf("Se ha borrado el piso exitosamente");
+            }
+            else {
+                printf("Introduzca SI si desea elimar todos los libros asociados al piso: \n  ");
+                char ans[10];
+                scanf("%s", ans);
+                if (strcmp(ans, "SI")==0){
+                    borrar_piso(piso_borrar);
+                    printf("Gracias");}
+                else {
+                    printf("Haz decidido no quitar el piso"); }
+            }
+            getchar();
+            getchar();
 
       break;
       
@@ -165,4 +222,4 @@ void menu(){
         printf("13. Quitar pisos\n"); //Solo si no tiene libros asociados
         printf("14. Salir y guardad\n");
         printf("\n**************************************\n");
-}
+ }
