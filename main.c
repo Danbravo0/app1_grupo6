@@ -6,7 +6,7 @@
 #include "libros.h" 
 #include "archivo.h" //leer y escribir
 #include "admin.h"
-#include "pablo.h" //un vio
+#include "pablo.h"
 
 
 Libro libros[1500]; //HACEMOS LA ARRAY GLOBAL PARA PODER EDITARLA DENTRO DE TODAS LAS FUNCIONES
