@@ -10,6 +10,9 @@
 
 Libro libros[1500]; //HACEMOS LA ARRAY GLOBAL PARA PODER EDITARLA DENTRO DE TODAS LAS FUNCIONES
 int contador_libro; //Cantidad de libros
+int contador_sede;
+int contador_seccion;
+int contador_piso;
 char sedes[1500][100];
 char pisos[1500][30];
 char estantes_secciones[1500][100];
@@ -25,7 +28,8 @@ int main(int argc, char *argv[]){
 
   int option = 0;
   leer(argc,argv); //en archivo.c
-  void llenar();
+  contador_piso=contador_seccion=contador_sede=contador_libro;
+  llenar();
   int salir = 0;
   while (salir == 0){
   
@@ -38,7 +42,7 @@ int main(int argc, char *argv[]){
       char nombre[50];
       scanf(" %[^\n]",nombre);
       infoLibro(buscar(nombre));
-      printf("Presione enter para vovler al menu");
+      printf("Presione enter para volver al menu");
       getchar();
       getchar(); //Dos veces porque el switch hace que el primer getchar se "ignore"
       option = 0;
@@ -46,7 +50,7 @@ int main(int argc, char *argv[]){
     
     case NUEVO:
       nuevo(contador_libro);
-      printf("Libro creado, presione enter para vovler al menu");
+      printf("Libro creado, presione enter para volver al menu");
       getchar();
       getchar(); //Dos veces porque el switch hace que el primer getchar se "ignora"
       break;
@@ -62,7 +66,14 @@ int main(int argc, char *argv[]){
       break;
 
     case ADD_SEDE:
-        sede_add();
+        printf("Ingrese el nombre de la sede a añadir: \n");
+        char nombre_s[50];
+        scanf(" %[^\n]",nombre_s);
+        sede_add(nombre_s);
+        printf("Sede añadida,presione enter para volver al menu");
+        getchar();
+        getchar();
+        option = 0;
       break;
 
     case QUITAR_SEDE:
@@ -86,7 +97,14 @@ int main(int argc, char *argv[]){
       break;
 
     case AGREGAR_SECCIONES:
-        seccion_add();
+        printf("Ingrese la seccion a añadir: \n");
+        char nombre_e[50];
+        scanf(" %[^\n]",nombre_e);
+        seccion_add(nombre_e);
+        printf("Seccion añadida, presione enter para volver al menu");
+        getchar();
+        getchar();
+        option = 0;
       break;
 
     case ELIMINAR_SECCIONES:
@@ -94,7 +112,14 @@ int main(int argc, char *argv[]){
       break;
 
     case AGREGAR_PISOS:
-        piso_add();
+        printf("Ingrese el numero de piso a añadir: \n");
+        char nombre_p[50];
+        scanf(" %[^\n]",nombre_p);
+        piso_add(nombre_p);
+        printf("Piso añadido, presione enter para volver al menu");
+        getchar();
+        getchar();
+        option = 0;
       break;
 
     case QUITAR_PISOS:
