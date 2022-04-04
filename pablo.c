@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "libros.h"
+#include "pablo.h"
 
 extern Libro libros[];
 extern char sedes[1000][100];
