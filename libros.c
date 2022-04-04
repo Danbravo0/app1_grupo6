@@ -106,37 +106,37 @@ void nuevo(int c_libros){
 
     printf("Nombre del libro a ingresar:");
     char nombre[300];
-    scanf("%s",nombre);
+    scanf(" %[^\n]",nombre);
   
 
     printf("Autor de libro a ingresar:");
     char autor[300];
-    scanf("%s",autor);
+    scanf(" %[^\n]",autor);
 
 
     printf("Anio del libro a ingresar:");
     char anio[300];
-    scanf("%s",anio);
+    scanf(" %[^\n]",anio);
 
     printf("Numero del estante de libro a ingresar:");
     char nest[300];
-    scanf("%s",nest);
+    scanf(" %[^\n]",nest);
 
     printf("Seccion del libro a ingresar:");
     char seccion[300];
-    scanf("%s",seccion);
+    scanf(" %[^\n]",seccion);
 
     printf("Piso del libro a ingresar:");
     char piso[300];
-    scanf("%s",piso);
+    scanf(" %[^\n]",piso);
 
     printf("Edificio del libro a ingresar:");
     char edificio[300];
-    scanf("%s",edificio);
+    scanf(" %[^\n]",edificio);
 
     printf("Sede del libro a ingresar:");
     char sede[300];
-    scanf("%s",sede);
+    scanf(" %[^\n]",sede);
 
     Libro libro;
 
