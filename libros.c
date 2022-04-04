@@ -29,7 +29,6 @@ void editar_libro(char *nombre){
 
     int option;
     scanf(" %d",&option);
-    printf("debug");
     switch (option)
     {
     case 1:
