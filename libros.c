@@ -17,6 +17,52 @@ int buscar(char *nombre) {
     }
 }
 
+void editar_libro(char *nombre){
+
+    int index=buscar(nombre);
+
+    printf("Que quieres editar de este libro?\n");
+    printf("Ingresa el numero para hacer la accion de su derecha\n");
+    printf("1. Editar titulo\n");
+    printf("2. Editar autor\n");
+    printf("3. Editar anio\n");
+
+    int option;
+    scanf(" %d",&option);
+    printf("debug");
+    switch (option)
+    {
+    case 1:
+        printf("Ingresa el nuevo titulo para el texto %s\n",nombre);
+        char nombre[50];
+        scanf(" %[^\n]",nombre);
+        strcpy(libros[index].titulo,nombre);
+        break;
+
+    case 2:
+
+        printf("Ingresa el nuevo autor para el texto %s\n",nombre);
+        char autor[50];
+        scanf(" %[^\n]",autor);
+        strcpy(libros[index].autor,autor);
+        break;
+    
+    case 3:
+
+        printf("Ingresa el nuevo anio para el texto %s\n",nombre);
+        char anio[10];
+        scanf(" %[^\n]",anio);
+        strcpy(libros[index].anio,anio);
+        break;
+
+
+    default:
+        break;
+    }
+
+}
+
+
 void borrar_libro(char *nombre) {
 
      int index=buscar(nombre);

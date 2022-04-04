@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdbool.h>
 #include <stdio.h>
+
 #include "libros.h" 
 #include "archivo.h" //leer y escribir
 #include "admin.h"
@@ -36,7 +37,7 @@ int main(int argc, char *argv[]){
     case BUSCAR: //Buscar libro
       printf("Ingrese el nombre del libro a buscar\n");
       char nombre[50];
-      scanf(" %[^\n]",nombre);
+      scanf("%[^\n]",nombre);
       infoLibro(buscar(nombre));
       printf("Presione enter para vovler al menu");
       getchar();
@@ -70,7 +71,11 @@ int main(int argc, char *argv[]){
       break;
 
     case EDIT_LIBRO:
-
+      printf("Ingresa el nombre del libro a editar\n");
+      char nombre_a_editar[50];
+      scanf(" %[^\n]",nombre_a_editar);
+      editar_libro(nombre_a_editar);
+  
       break;
 
     case CAMBIAR_SEDE:
