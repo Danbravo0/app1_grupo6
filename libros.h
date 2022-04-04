@@ -15,8 +15,9 @@ typedef struct Libros Libro;
 
 int buscar(char *nombre);
 
-void borrar_libro(char *nombre);
+void editar_libro(char *nombre);
 
+void borrar_libro(char *nombre);
 
 void infoLibro(int index);
 
