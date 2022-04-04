@@ -13,4 +13,4 @@ add_executable(app1_grupo6
 
         README.md
         "Tarea 1.pdf"
-        test.exe)
+        test.exe admin.c admin.h)
