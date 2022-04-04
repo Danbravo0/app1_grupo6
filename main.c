@@ -41,7 +41,7 @@ int main(int argc, char *argv[]){
     case BUSCAR: //Buscar libro
       printf("Ingrese el nombre del libro a buscar\n");
       char nombre[50];
-      scanf("%[^\n]",nombre);
+      scanf(" %[^\n]",nombre);
       infoLibro(buscar(nombre));
       printf("Presione enter para volver al menu");
       getchar();
